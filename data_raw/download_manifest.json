@@ -1,0 +1,47 @@
+{
+  "inventory": {
+    "ok": true,
+    "source": "C:\\Users\\moatejioye\\Downloads\\Job_Housing Mismatch.xlsx",
+    "xlsx": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\Job_Housing_Mismatch_inventory.xlsx",
+    "csv": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\dataset_inventory.csv",
+    "rows": 33
+  },
+  "tract_boundaries": {
+    "ok": true,
+    "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Tracts_Blocks/MapServer/0/query?where=STATE%3D%2731%27+AND+COUNTY%3D%27055%27&outFields=GEOID%2CNAME%2CSTATE%2CCOUNTY%2CTRACT&outSR=4326&f=geojson&returnGeometry=true",
+    "path": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\douglas_county_tracts_tigerweb.geojson",
+    "bytes": 891072,
+    "layer_id": 0,
+    "attempts": [
+      {
+        "ok": true,
+        "url": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Tracts_Blocks/MapServer/0/query?where=STATE%3D%2731%27+AND+COUNTY%3D%27055%27&outFields=GEOID%2CNAME%2CSTATE%2CCOUNTY%2CTRACT&outSR=4326&f=geojson&returnGeometry=true",
+        "path": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\douglas_county_tracts_tigerweb.geojson",
+        "bytes": 891072
+      }
+    ]
+  },
+  "lodes_wac": {
+    "ok": true,
+    "url": "https://lehd.ces.census.gov/data/lodes/LODES8/ne/wac/ne_wac_S000_JT00_2022.csv.gz",
+    "path": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\ne_wac_S000_JT00.csv.gz",
+    "bytes": 502454
+  },
+  "lodes_rac": {
+    "ok": true,
+    "url": "https://lehd.ces.census.gov/data/lodes/LODES8/ne/rac/ne_rac_S000_JT00_2022.csv.gz",
+    "path": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\ne_rac_S000_JT00.csv.gz",
+    "bytes": 1464657
+  },
+  "lodes_od": {
+    "ok": true,
+    "url": "https://lehd.ces.census.gov/data/lodes/LODES8/ne/od/ne_od_main_JT00_2022.csv.gz",
+    "path": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\ne_od_main_JT00.csv.gz",
+    "bytes": 4741680
+  },
+  "gtfs": {
+    "ok": false,
+    "path": "C:\\Users\\moatejioye\\Documents\\Spatial Mismatch\\job-housing-mismatch-omaha\\data_raw\\GTFS_PLACEHOLDER.md",
+    "needed": "Static GTFS zip URL"
+  }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opportunity and Spatial Mismatch Atlas for Omaha</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <section class="brand-block">
+          <p class="eyebrow">Omaha, Nebraska</p>
+          <h1>Opportunity and Spatial Mismatch Atlas</h1>
+          <p>
+            A tract-level planning atlas for comparing job access, wage opportunity,
+            housing affordability, transportation access, and neighborhood equity context.
+          </p>
+        </section>
+
+        <section class="kpi-grid" aria-label="Dashboard summary">
+          <div class="kpi">
+            <span>Total jobs</span>
+            <strong id="kpiJobs">--</strong>
+          </div>
+          <div class="kpi">
+            <span>Resident workers</span>
+            <strong id="kpiWorkers">--</strong>
+          </div>
+          <div class="kpi">
+            <span>Avg. mismatch score</span>
+            <strong id="kpiAvgMismatch">--</strong>
+          </div>
+          <div class="kpi">
+            <span>Avg. opportunity index</span>
+            <strong id="kpiAvgOpportunity">--</strong>
+          </div>
+          <div class="kpi">
+            <span>High mismatch share</span>
+            <strong id="kpiHighShare">--</strong>
+          </div>
+          <div class="kpi">
+            <span>Weak transit share</span>
+            <strong id="kpiWeakTransit">--</strong>
+          </div>
+          <div class="kpi wide-kpi">
+            <span>Highest mismatch tract</span>
+            <strong id="kpiHighestMismatch">--</strong>
+          </div>
+          <div class="kpi wide-kpi">
+            <span>Highest opportunity tract</span>
+            <strong id="kpiHighestOpportunity">--</strong>
+          </div>
+        </section>
+
+        <section class="control-block">
+          <label for="layerSelect">Map layer</label>
+          <select id="layerSelect">
+            <option value="spatial_mismatch_score_custom">Spatial Mismatch Score</option>
+            <option value="opportunity_access_index">Opportunity Access Index</option>
+            <option value="poverty_rate">Poverty Rate</option>
+            <option value="unemployment_rate">Unemployment Rate</option>
+            <option value="households_without_vehicles">Households without Vehicles</option>
+            <option value="people_of_color_share">Race/Ethnicity Context</option>
+            <option value="median_rent">Median Rent</option>
+            <option value="median_household_income">Median Household Income</option>
+            <option value="transit_access_flag">Transit Access</option>
+            <option value="jobs_worker_ratio">Jobs-worker ratio</option>
+          </select>
+        </section>
+
+        <section class="control-block">
+          <label for="tractSearch">Tract search</label>
+          <input id="tractSearch" type="search" placeholder="Enter tract name or GEOID" />
+        </section>
+
+        <section class="legend-block">
+          <h2>Legend</h2>
+          <div id="legend"></div>
+        </section>
+
+        <section class="explanation">
+          <h2>Spatial Mismatch Hypothesis</h2>
+          <p>
+            The Spatial Mismatch Hypothesis argues that unemployment and lower
+            wages can result when workers, especially low-income and historically
+            marginalized residents, live far from growing job centers and face
+            housing or transportation barriers that limit access to those opportunities.
+          </p>
+          <p>
+            This atlas operationalizes the concept with tract-level indicators for
+            jobs, wage tiers, resident workers, affordability, transit proximity,
+            vehicle access, and neighborhood socioeconomic context.
+          </p>
+          <p class="source-note">
+            Sources: Census TIGERweb, LEHD/LODES, ACS 5-year where available, and GTFS when supplied.
+          </p>
+        </section>
+      </aside>
+
+      <section class="map-wrap">
+        <div id="map" aria-label="Omaha spatial mismatch map"></div>
+        <div id="status" class="status" hidden></div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

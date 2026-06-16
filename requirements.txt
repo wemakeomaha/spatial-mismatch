@@ -1,0 +1,7 @@
+pandas
+numpy
+
+# Optional but useful for later geospatial expansion:
+# geopandas
+# shapely
+# pyogrio
